@@ -1,0 +1,30 @@
+version: '3'
+
+services:
+  event-service:
+    build:
+      context: .
+      dockerfile: Dockerfile-event
+    ports:
+      - "5000:5000"
+
+  teams-service:
+    build:
+      context: .
+      dockerfile: Dockerfile-team
+    ports:
+      - "5001:5001"
+
+  players-service:
+    build:
+      context: .
+      dockerfile: Dockerfile-player
+    ports:
+      - "5002:5002"
+
+  stats-service:
+    build:
+      context: .
+      dockerfile: Dockerfile-stats
+    ports:
+      - "5003:5003"
