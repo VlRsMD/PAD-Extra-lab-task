@@ -1,0 +1,30 @@
+version: '3'
+
+services:
+  flight-service:
+    build:
+      context: .
+      dockerfile: Dockerfile-flights
+    ports:
+      - "5004:5004"
+
+  origin-service:
+    build:
+      context: .
+      dockerfile: Dockerfile-origins
+    ports:
+      - "5005:5005"
+
+  destination-service:
+    build:
+      context: .
+      dockerfile: Dockerfile-destinations
+    ports:
+      - "5006:5006"
+
+  airline-service:
+    build:
+      context: .
+      dockerfile: Dockerfile-airlines
+    ports:
+      - "5007:5007"
